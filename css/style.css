@@ -30,21 +30,22 @@ body {
   }
   
   nav {
-    background-color: #006400;
-    text-align: center;
+    background-color: #006400; /* 濃い緑色 */
     padding: 10px 0;
+    text-align: center;
   }
   
   nav a {
-    display: inline-block;
-    padding: 15px 20px;
     color: white;
     text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
   }
   
   nav a:hover {
-    background-color: #228B22;
+    text-decoration: underline;
   }
+  
   
   .intro {
     padding: 40px 20px;
