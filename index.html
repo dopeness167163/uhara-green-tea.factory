@@ -26,9 +26,34 @@
       <p>右原製茶は、自然豊かな環境で育まれたお茶を、心を込めてお届けしています。</p>
     </section>
   </main>
-
+  <div class="slideshow-container">
+    <img class="slide-image" src="img/Image (水).jpg" alt="スライド1">
+    <img class="slide-image" src="img/Image (選別).jpg" alt="スライド2">
+    <img class="slide-image" src="img/Image (揉み).jpg" alt="スライド3">
+  </div>
+  
   <footer>
     <p>&copy; 2025 右原製茶</p>
   </footer>
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide-image");
+  
+    function showSlides() {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+      });
+  
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add("active");
+    }
+  
+    // 最初のスライドを表示
+    slides[slideIndex].classList.add("active");
+  
+    // 4秒ごとにスライド切り替え
+    setInterval(showSlides, 4000);
+  </script>
+  
 </body>
 </html>
