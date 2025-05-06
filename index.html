@@ -4,6 +4,20 @@
   <meta charset="UTF-8">
   <title>右原製茶</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .slideshow-section {
+      width: 100%;
+      height: 300px; /* ヘッダーと同じ高さなどに合わせて調整 */
+      overflow: hidden;
+    }
+
+    .slideshow-section img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
 </head>
 <body>
   <header class="main-header">
@@ -14,10 +28,9 @@
         <a href="#">会社概要</a>
         <a href="#">商品紹介</a>
         <a href="https://forms.gle/d7LwExxxePRGbpVu9">お問い合わせ</a>
-        <a href="https://www.google.com/maps/uv?pb=!1s0x6019ed006973e12d%3A0x670133bce6e124ae!3m1!7e115!4s%2Fmaps%2Fplace%2F%25E5%258F%25B3%25E5%258E%259F%25E8%25A3%25BD%25E8%258C%25B6%2F%4034.9656062%2C138.9472546%2C3a%2C75y%2C289.81h%2C90t%2Fdata%3D*213m4*211e1*213m2*211sKY5rLRtL4_9cqC9pgy4phA*212e0*214m2*213m1*211s0x6019ed006973e12d%3A0x670133bce6e124ae%3Fsa%3DX%26ved%3D2ahUKEwi6yNvkj46NAxXkefUHHforBwEQpx96BAgqEAA!5z5Y-z5Y6f6KO96Iy2IC0gR29vZ2xlIOaknOe0og!15sCgIgAQ&imagekey=!1e2!2sKY5rLRtL4_9cqC9pgy4phA&cr=le_a7&hl=ja&ved=1t%3A206134&ictx=111" target="_blank">アクセス</a>
+        <a href="https://www.google.com/maps?q=右原製茶" target="_blank">アクセス</a>
         <a href="privacy.html">プライバシーポリシー</a>
-      </nav>
-      
+    </nav>
   </header>
 
   <main>
@@ -25,55 +38,32 @@
       <h2>お茶づくりへのこだわり</h2>
       <p>右原製茶は、自然豊かな環境で育まれたお茶を、心を込めてお届けしています。</p>
     </section>
+
+    <section class="slideshow-section">
+      <img id="slideshow" src="img/photo1.jpg" alt="スライドショー画像">
+    </section>
   </main>
-  <section class="slideshow-section">
-    <img id="slideshow" src="img/image1.jpg" alt="スライドショー画像">
-  </section>  
-  <div class="slideshow-container">
-    <img class="slide-image" src="img/Image (水).jpg" alt="スライド1">
-    <img class="slide-image" src="img/Image (選別).jpg" alt="スライド2">
-    <img class="slide-image" src="img/Image (揉み).jpg" alt="スライド3">
-  </div>
-  
+
   <footer>
     <p>&copy; 2025 右原製茶</p>
   </footer>
-  <script>
-    let slideIndex = 0;
-    const slides = document.querySelectorAll(".slide-image");
-  
-    function showSlides() {
-      slides.forEach((slide, i) => {
-        slide.classList.remove("active");
-      });
-  
-      slideIndex = (slideIndex + 1) % slides.length;
-      slides[slideIndex].classList.add("active");
-    }
-  
-    // 最初のスライドを表示
-    slides[slideIndex].classList.add("active");
-  
-    // 4秒ごとにスライド切り替え
-    setInterval(showSlides, 4000);
-  </script>
+
   <script>
     const images = [
-      "img/Image (水).jpg",
-      "img/Image (選別).jpg",
-      "img/Image (揉み).jpg",
+    "img/image（水）.jpg", 
+    "img/image（選別）.jpg", 
+    "img/image（揉み）.jpg", 
     ];
-  
+
     let currentIndex = 0;
     const slideshow = document.getElementById("slideshow");
-  
+
     function changeImage() {
       currentIndex = (currentIndex + 1) % images.length;
       slideshow.src = images[currentIndex];
     }
-  
+
     setInterval(changeImage, 3000); // 3秒ごとに切り替え
   </script>
-  
 </body>
 </html>
