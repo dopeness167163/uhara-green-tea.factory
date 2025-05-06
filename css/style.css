@@ -29,27 +29,20 @@ body {
     padding: 10px 20px;
   }
   
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+  nav {
     background-color: #006400;
-    margin: 0;
-    padding: 0;
+    text-align: center;
+    padding: 10px 0;
   }
   
-  nav ul li {
-    margin: 0;
-  }
-  
-  nav ul li a {
-    display: block;
+  nav a {
+    display: inline-block;
     padding: 15px 20px;
     color: white;
     text-decoration: none;
   }
   
-  nav ul li a:hover {
+  nav a:hover {
     background-color: #228B22;
   }
   
