@@ -80,3 +80,15 @@ body {
     z-index: 1;
   }
   
+  .slideshow-section {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  #slideshow {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  
